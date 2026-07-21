@@ -3,7 +3,7 @@ export const site = {
   shortName: "Shield",
   tagline: "Verified compliance. Zero conflict.",
   promise: "An independent check, not a fire company.",
-  url: "https://shieldfirecompliance.com",
+  url: "https://www.shieldfirecompliance.com",
   email: "inspections@shieldfirecompliance.com",
   phone: "(212) 555-0148",
   phoneHref: "tel:+12125550148",
