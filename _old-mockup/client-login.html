@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Login — Shield Fire Compliance</title>
+<meta name="description" content="Log in to your Shield Fire Compliance client portal to view inspection records and compliance history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">&#9819;</span>
+      <span class="logo-text">SHIELD<span class="logo-sub">Fire Compliance</span></span>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="how-it-works.html">How it works</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="client-login.html" class="nav-login">Client login</a>
+      <a href="book-inspection.html" class="btn btn-primary nav-cta">Book inspection</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section style="padding:80px 0;">
+    <div class="container" style="max-width:480px;">
+      <div class="section-head center">
+        <span class="eyebrow" style="margin-left:auto;margin-right:auto;">Client Portal</span>
+        <h1 style="font-size:2rem;">Log in to your records.</h1>
+        <p>View inspection history, download filed reports, and track upcoming visits.</p>
+      </div>
+
+      <div class="form-card">
+        <form data-demo-form>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          <p class="form-note" style="text-align:center;">Forgot your password? <a href="#" style="color:var(--navy);text-decoration:underline;">Reset it here</a>.</p>
+          <div class="form-success">Portal access is provisioned after your first inspection. Contact us if you need your login set up.</div>
+        </form>
+      </div>
+
+      <p class="form-note" style="text-align:center;margin-top:24px;">Not a client yet? <a href="book-inspection.html" style="color:var(--navy);text-decoration:underline;">Book your first inspection</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">SHIELD<span class="logo-sub">Fire Compliance</span></span>
+      <p>An independent check. Not a fire company.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <a href="pricing.html">Pricing</a>
+        <a href="book-inspection.html">Book inspection</a>
+        <a href="client-login.html">Client login</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:inspections@shieldfirecompliance.com">inspections@shieldfirecompliance.com</a>
+        <a href="tel:+10000000000">(000) 000-0000</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Shield Fire Compliance. All rights reserved.</span>
+    <span class="footer-readout">REC &middot; <span class="pass">VERIFIED</span> &middot; ON RECORD</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper font-body text-slate antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-navy;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: rgba(224, 163, 59, 0.28);
+    color: #0b1730;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e0a33b;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8;
+  }
+
+  /* Mono eyebrow label — a signature of the brand. */
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-eyebrow text-gold;
+  }
+
+  .eyebrow-index {
+    @apply font-mono text-xs font-medium uppercase tracking-eyebrow text-slate;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-body text-sm font-semibold transition-all duration-200 will-change-transform;
+  }
+
+  /* Verify Gold fill + Deep Navy text — WCAG AA, high contrast. */
+  .btn-primary {
+    @apply bg-gold text-deep-navy shadow-sm hover:-translate-y-0.5 hover:bg-[#eab352] hover:shadow-gold-glow active:translate-y-0;
+  }
+
+  /* Solid Brand Navy + white text — secondary solid style. */
+  .btn-navy {
+    @apply bg-navy text-paper hover:-translate-y-0.5 hover:bg-[#1c2f52] active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply border border-hairline bg-white text-navy hover:-translate-y-0.5 hover:border-navy/30 hover:bg-paper;
+  }
+
+  .btn-on-dark {
+    @apply border border-white/20 bg-white/5 text-paper hover:-translate-y-0.5 hover:border-gold/60 hover:bg-white/10;
+  }
+
+  .card {
+    @apply rounded-2xl border border-hairline bg-white p-7 shadow-card transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-navy/15 hover:shadow-card-hover;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}

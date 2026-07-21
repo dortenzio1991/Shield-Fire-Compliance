@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Inspection — Shield Fire Compliance</title>
+<meta name="description" content="Book an independent fire and life-safety compliance inspection. Tell us your site and standard — we'll confirm scope and schedule within one business day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">&#9819;</span>
+      <span class="logo-text">SHIELD<span class="logo-sub">Fire Compliance</span></span>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="how-it-works.html">How it works</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="client-login.html" class="nav-login">Client login</a>
+      <a href="book-inspection.html" class="btn btn-primary nav-cta">Book inspection</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Book an Inspection</span>
+      <h1>Tell us about your site.</h1>
+      <p>Fill in the details below and we'll confirm scope, pricing, and scheduling within one business day.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:56px;">
+    <div class="container two-col">
+
+      <div class="form-card">
+        <form data-demo-form>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="company">Company / property name</label>
+              <input type="text" id="company" name="company" placeholder="Acme Properties LLC">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="email2">Email</label>
+              <input type="email" id="email2" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Site address</label>
+            <input type="text" id="address" name="address" placeholder="Street, city, state, ZIP" required>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="service">Service needed</label>
+              <select id="service" name="service">
+                <option>Fire extinguisher audit</option>
+                <option>Alarm &amp; detection check</option>
+                <option>Sprinkler &amp; suppression review</option>
+                <option>Egress &amp; exit compliance</option>
+                <option>Fire door &amp; assembly inspection</option>
+                <option>Annual compliance certification</option>
+                <option>Kitchen suppression check</option>
+                <option>Multi-site portfolio program</option>
+                <option>Not sure — help me choose</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input type="date" id="date" name="date">
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Additional notes</label>
+            <textarea id="notes" name="notes" placeholder="Occupancy type, number of sites, access instructions, or anything else we should know."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Request booking</button>
+          <div class="form-success">Thanks — your request is in. We'll confirm scope and scheduling within one business day.</div>
+        </form>
+      </div>
+
+      <div>
+        <div class="readout-inline" style="margin-bottom:24px;">
+          <span>Response time</span><span class="dot">&middot;</span><span class="pass">1 business day</span>
+        </div>
+        <h3>What happens after you submit</h3>
+        <div style="display:flex;flex-direction:column;gap:20px;margin-top:20px;">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div><h3>Confirm</h3><p>We confirm scope, standard, and an all-in quote by email.</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div><h3>Schedule</h3><p>We lock in a visit window that works for your site access.</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div><h3>Inspect &amp; file</h3><p>Geo-tagged, timestamped inspection — filed to your portal same day.</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">SHIELD<span class="logo-sub">Fire Compliance</span></span>
+      <p>An independent check. Not a fire company.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <a href="pricing.html">Pricing</a>
+        <a href="book-inspection.html">Book inspection</a>
+        <a href="client-login.html">Client login</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:inspections@shieldfirecompliance.com">inspections@shieldfirecompliance.com</a>
+        <a href="tel:+10000000000">(000) 000-0000</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Shield Fire Compliance. All rights reserved.</span>
+    <span class="footer-readout">REC &middot; <span class="pass">VERIFIED</span> &middot; ON RECORD</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
