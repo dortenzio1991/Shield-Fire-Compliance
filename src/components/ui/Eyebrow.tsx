@@ -17,7 +17,7 @@ export function Eyebrow({
       )}
     >
       {index && <span className="text-slate">{index}</span>}
-      {index && <span aria-hidden className="text-hairline">—</span>}
+      {index && <span aria-hidden className="text-hairline">·</span>}
       <span className="text-gold">{children}</span>
     </span>
   );

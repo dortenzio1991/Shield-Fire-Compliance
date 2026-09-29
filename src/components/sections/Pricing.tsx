@@ -5,49 +5,50 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { cn } from "@/lib/cn";
 
-export const tiers = [
+type Tier = {
+  name: string;
+  priceLabel: string;
+  price: string;
+  unit: string;
+  descriptor: string;
+  features: string[];
+  cta: string;
+  featured: boolean;
+  badge?: string;
+};
+
+export const tiers: Tier[] = [
   {
-    name: "Single Inspection",
-    price: "$249",
-    unit: "per site, per visit",
-    blurb: "A one-time independent check of your sprinkler and standpipe systems.",
+    name: "Sprinkler",
+    priceLabel: "Starting at",
+    price: "$99",
+    unit: "per month",
+    descriptor: "Single sprinkler riser",
     features: [
-      "One site, one visit",
-      "Geo-tagged, timestamped report",
-      "Same-day FDNY filing",
-      "Same-hour deficiency notification",
-    ],
-    cta: "Book a single inspection",
-    featured: false,
-  },
-  {
-    name: "Monthly Recurring",
-    price: "$179",
-    unit: "per site, per month",
-    blurb: "Standing monthly compliance for continuous FDNY recordkeeping.",
-    features: [
-      "Recurring monthly inspections",
-      "Continuous compliance history",
-      "Priority scheduling",
-      "Same-day FDNY filing, every visit",
+      "Monthly visual inspection of your sprinkler system",
+      "Log book signed on site",
+      "Photo-verified report after every visit",
+      "Same-day deficiency notice",
       "First month free",
     ],
-    cta: "Get Your First Month Free",
-    featured: true,
+    cta: "Get your first month free",
+    featured: false,
   },
   {
-    name: "Portfolio",
-    price: "Custom",
-    unit: "multi-site, billed together",
-    blurb: "Standardized monthly inspections across every location you manage.",
+    name: "Sprinkler and standpipe",
+    priceLabel: "Starting at",
+    price: "$125",
+    unit: "per month",
+    descriptor: "Single riser plus standpipe",
     features: [
-      "Unlimited sites, one schedule",
-      "Consolidated compliance dashboard",
-      "Dedicated account contact",
-      "Published per-site rate — no surprises",
+      "Monthly visual inspection of sprinkler and standpipe systems",
+      "Log book signed on site",
+      "Photo-verified report after every visit",
+      "Same-day deficiency notice",
+      "First month free",
     ],
-    cta: "Talk to us",
-    featured: false,
+    cta: "Get your first month free",
+    featured: true,
   },
 ];
 
@@ -66,14 +67,14 @@ export function Pricing({
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-[2.6rem]">
-                Honest pricing, published up front.
+                Straightforward pricing.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 font-body text-lg leading-relaxed text-slate">
-                No &ldquo;call for a quote.&rdquo; You see the rate before you
-                book — because hiding pricing is one more thing we&apos;ll never
-                do.
+                Pricing starts at the rates below and depends on your
+                building&apos;s size and number of risers. We confirm your exact
+                monthly rate within one business day, before anything is signed.
               </p>
             </Reveal>
           </div>
@@ -81,7 +82,7 @@ export function Pricing({
 
         <RevealGroup
           className={cn(
-            "grid gap-6 lg:grid-cols-3",
+            "mx-auto grid max-w-3xl gap-6 sm:grid-cols-2",
             withHeading ? "mt-14" : "mt-0"
           )}
         >
@@ -95,9 +96,9 @@ export function Pricing({
                     : "border border-hairline bg-white shadow-card hover:-translate-y-1 hover:shadow-card-hover"
                 )}
               >
-                {tier.featured && (
+                {tier.badge && (
                   <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-wider text-gold">
-                    Recommended
+                    {tier.badge}
                   </span>
                 )}
                 <h3
@@ -108,7 +109,15 @@ export function Pricing({
                 >
                   {tier.name}
                 </h3>
-                <div className="mt-4 flex items-baseline gap-2">
+                <span
+                  className={cn(
+                    "mt-4 font-mono text-[11px] uppercase tracking-wider",
+                    tier.featured ? "text-paper/55" : "text-slate"
+                  )}
+                >
+                  {tier.priceLabel}
+                </span>
+                <div className="mt-1 flex items-baseline gap-2">
                   <span
                     className={cn(
                       "font-display text-4xl font-bold",
@@ -128,11 +137,11 @@ export function Pricing({
                 </div>
                 <p
                   className={cn(
-                    "mt-4 font-body text-[15px] leading-relaxed",
+                    "mt-3 font-body text-[15px] leading-relaxed",
                     tier.featured ? "text-paper/70" : "text-slate"
                   )}
                 >
-                  {tier.blurb}
+                  {tier.descriptor}
                 </p>
 
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
@@ -170,8 +179,23 @@ export function Pricing({
         </RevealGroup>
 
         <Reveal>
+          <p className="mx-auto mt-8 max-w-2xl text-center font-body text-[15px] leading-relaxed text-slate">
+            Managing several buildings? Each building gets its own schedule and
+            rate, with one point of contact for all of them.{" "}
+            <Link
+              href="/book"
+              className="font-medium text-navy underline underline-offset-4 hover:text-gold"
+            >
+              Talk to us
+            </Link>
+            .
+          </p>
+        </Reveal>
+
+        <Reveal>
           <p className="mt-8 text-center font-mono text-xs uppercase tracking-eyebrow text-slate">
-            All plans: no repairs sold · no financial stake in any finding · ever
+            Every plan: no repairs sold · no referral fees · no stake in any
+            finding
           </p>
         </Reveal>
       </Container>

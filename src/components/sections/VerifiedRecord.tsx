@@ -1,4 +1,4 @@
-import { Check, MapPin, Clock } from "lucide-react";
+import { Check, Camera } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { cn } from "@/lib/cn";
@@ -11,11 +11,11 @@ type Log = {
 };
 
 const logs: Log[] = [
-  { id: "S-12", system: "Sprinkler · Riser A", time: "09:42", status: "PASS" },
-  { id: "S-13", system: "Sprinkler · Riser B", time: "09:58", status: "PASS" },
-  { id: "SP-04", system: "Standpipe · Stair 2", time: "10:11", status: "PASS" },
-  { id: "SP-05", system: "Standpipe · Stair 3", time: "10:24", status: "FAIL" },
-  { id: "S-14", system: "Sprinkler · Cellar", time: "10:40", status: "PASS" },
+  { id: "SPR-01", system: "Sprinkler · Riser A", time: "09:42", status: "PASS" },
+  { id: "SPR-02", system: "Sprinkler · Riser B", time: "09:58", status: "PASS" },
+  { id: "STP-01", system: "Standpipe · Stair 2", time: "10:11", status: "PASS" },
+  { id: "STP-02", system: "Standpipe · Stair 3", time: "10:24", status: "FAIL" },
+  { id: "SPR-03", system: "Sprinkler · Cellar", time: "10:40", status: "PASS" },
 ];
 
 export function VerifiedRecord() {
@@ -28,7 +28,7 @@ export function VerifiedRecord() {
             <Reveal>
               <span className="inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-eyebrow">
                 <span className="text-paper/45">05</span>
-                <span className="text-white/20">—</span>
+                <span className="text-white/20">·</span>
                 <span className="text-gold">The verified record</span>
               </span>
             </Reveal>
@@ -39,18 +39,18 @@ export function VerifiedRecord() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 max-w-lg font-body text-lg leading-relaxed text-paper/70">
-                Geo-tagged. Timestamped. Filed the same day. Each checkpoint is
-                recorded with a pass or fail status you — and the FDNY — can
-                verify. No paper logbooks, no reconstructed notes, no delay.
+                Photographed. Signed on site. In your inbox after every visit.
+                Each checkpoint is marked pass or fail with a photo, and the
+                signed log book is photographed too, so you can see exactly what
+                was checked.
               </p>
             </Reveal>
 
             <Reveal delay={0.15}>
-              <dl className="mt-9 grid grid-cols-3 gap-6">
+              <dl className="mt-9 grid grid-cols-2 gap-6">
                 {[
-                  { icon: MapPin, k: "Geo-tagged", v: "Every visit" },
-                  { icon: Clock, k: "Same-day", v: "Filing" },
-                  { icon: Check, k: "Verified", v: "Pass / fail" },
+                  { icon: Camera, k: "Photo verified", v: "Every visit" },
+                  { icon: Check, k: "Signed on site", v: "Every log book" },
                 ].map(({ icon: Icon, k, v }) => (
                   <div key={k}>
                     <Icon size={18} className="text-gold" />
@@ -66,7 +66,7 @@ export function VerifiedRecord() {
             </Reveal>
           </div>
 
-          {/* Right — product screenshot UI */}
+          {/* Right — sample report UI */}
           <Reveal delay={0.1} y={24}>
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-navy/40 shadow-record backdrop-blur">
               {/* window chrome */}
@@ -77,17 +77,16 @@ export function VerifiedRecord() {
                   <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
                 </div>
                 <span className="font-mono text-[11px] uppercase tracking-eyebrow text-paper/45">
-                  Compliance Record · 2026-06-30
+                  Sample report
                 </span>
               </div>
 
               {/* meta bar */}
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-white/[0.02] px-5 py-3 font-mono text-[11px] text-paper/55">
-                <span className="inline-flex items-center gap-1.5">
-                  <MapPin size={12} className="text-gold/80" />
-                  40.7128° N, 74.0060° W
+              <div className="border-b border-white/10 bg-white/[0.02] px-5 py-3 font-mono text-[11px] text-paper/55">
+                <span>
+                  Site: Sample building, Brooklyn · FDNY C of F S-12 #93607281 ·
+                  S-13 #93635076
                 </span>
-                <span>Site: 220 Water St · FDNY C of F #F-60</span>
               </div>
 
               {/* log rows */}
@@ -122,12 +121,18 @@ export function VerifiedRecord() {
                 ))}
               </div>
 
+              {/* photo strip */}
+              <div className="flex items-center gap-1.5 border-t border-white/10 bg-white/[0.02] px-5 py-2.5 font-mono text-[11px] text-paper/55">
+                <Camera size={12} className="text-gold/80" />
+                Photos: 12 · Log book signed and photographed
+              </div>
+
               {/* footer */}
               <div className="flex items-center justify-between border-t border-white/10 bg-white/[0.02] px-5 py-3.5 font-mono text-[11px] text-paper/50">
-                <span>4 PASS · 1 FAIL · deficiency notified 10:25</span>
+                <span>4 pass · 1 deficiency · property manager notified 10:25</span>
                 <span className="inline-flex items-center gap-1.5 text-gold">
                   <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-                  Filed
+                  Sent
                 </span>
               </div>
             </div>

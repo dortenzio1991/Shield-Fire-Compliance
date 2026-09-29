@@ -7,24 +7,24 @@ import { Reveal } from "@/components/motion/Reveal";
 export const metadata: Metadata = {
   title: "Book an inspection",
   description:
-    "Book an independent sprinkler and standpipe compliance inspection under an FDNY Certificate of Fitness. Tell us your site — we confirm scope and scheduling within one business day.",
+    "Book an independent sprinkler and standpipe compliance inspection under an FDNY Certificate of Fitness. Tell us your site and we confirm scope and scheduling within one business day.",
 };
 
 const afterSteps = [
   {
     n: "1",
     title: "Confirm",
-    body: "We confirm scope, standard, and a published all-in rate by email.",
+    body: "We confirm scope and your monthly rate by email within one business day.",
   },
   {
     n: "2",
     title: "Schedule",
-    body: "We lock in a monthly visit window that works for your building access.",
+    body: "We set a standing monthly visit window.",
   },
   {
     n: "3",
-    title: "Inspect & file",
-    body: "Geo-tagged, timestamped inspection — filed to the FDNY the same day.",
+    title: "Inspect and report",
+    body: "We inspect, sign the log book on site, and email your photo-verified report.",
   },
 ];
 

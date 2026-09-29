@@ -19,15 +19,16 @@ export function CtaBand() {
           <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <ShieldMark variant="dark" className="h-12 w-auto" />
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-paper sm:text-[2.6rem]">
-              Get a compliance record with nothing to hide behind.
+              Get a monthly record you can check.
             </h2>
             <p className="mt-5 max-w-xl font-body text-lg leading-relaxed text-paper/70">
-              Start with a month of independent sprinkler and standpipe
-              inspection — geo-tagged, timestamped, and filed the same day. Free.
+              Start with a free month of sprinkler and standpipe inspection.
+              Signed on site, photo verified, and in your inbox after every
+              visit. From $99 per month after that.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
               <Link href="/book" className="btn btn-primary px-6 py-3.5 text-base">
-                Get Your First Month Free
+                Get your first month free
               </Link>
               <Link href="/how-it-works" className="btn btn-on-dark px-6 py-3.5 text-base">
                 See how it works

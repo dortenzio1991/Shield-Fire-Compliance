@@ -1,15 +1,16 @@
-import { Check, MapPin } from "lucide-react";
+import { Check, Camera } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 type Row = { label: string; value: string; status?: "pass" | "fail" };
 
 /**
- * The signature "verified inspection record" card — a Deep Navy tile with a
- * mono data readout, a gold check, a PASS status pill, timestamp and geo-tag.
+ * The signature sample inspection-record card: a Brand Navy tile with a mono
+ * data readout, a gold check, a PASS status pill, and a photo-verification
+ * footer. Clearly labeled as a sample, never a real filed record.
  */
 export function RecordCard({
   className,
-  title = "Inspection Record",
+  title = "Sample report",
   rows = defaultRows,
   animateCheck = false,
 }: {
@@ -32,7 +33,7 @@ export function RecordCard({
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-wider text-gold">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            Verified
+            Sample
           </span>
         </div>
 
@@ -50,7 +51,7 @@ export function RecordCard({
           </span>
           <div className="min-w-0">
             <p className="font-mono text-sm text-paper/90">
-              S-12 · 2026-06-30 · 09:42 · <span className="text-gold">PASS</span>
+              SPR-01 · Sample date · 09:42 · <span className="text-gold">PASS</span>
             </p>
             <p className="mt-1 font-body text-xs text-paper/50">
               Sprinkler &amp; standpipe · monthly visual inspection
@@ -63,14 +64,14 @@ export function RecordCard({
           {rows.map((row) => (
             <div
               key={row.label}
-              className="flex items-center justify-between px-4 py-2.5"
+              className="flex items-center justify-between gap-4 px-4 py-2.5"
             >
               <dt className="font-mono text-[11px] uppercase tracking-wider text-paper/45">
                 {row.label}
               </dt>
               <dd
                 className={cn(
-                  "font-mono text-sm",
+                  "text-right font-mono text-sm",
                   row.status === "pass"
                     ? "font-medium text-gold"
                     : row.status === "fail"
@@ -90,13 +91,13 @@ export function RecordCard({
           ))}
         </dl>
 
-        {/* Geo-tag footer */}
+        {/* Photo-verification footer */}
         <div className="mt-5 flex items-center justify-between font-mono text-[11px] text-paper/45">
           <span className="inline-flex items-center gap-1.5">
-            <MapPin size={12} className="text-gold/80" />
-            40.7128° N, 74.0060° W
+            <Camera size={12} className="text-gold/80" />
+            Photos: 12, incl. signed log book
           </span>
-          <span>Filed same day</span>
+          <span>Sent after visit</span>
         </div>
       </div>
     </div>
@@ -104,8 +105,10 @@ export function RecordCard({
 }
 
 const defaultRows: Row[] = [
-  { label: "Site", value: "S-12" },
-  { label: "Date", value: "2026-06-30" },
-  { label: "Time", value: "09:42 EDT" },
+  { label: "Site", value: "Sample building, Brooklyn" },
+  { label: "Date", value: "Sample date" },
+  { label: "Time", value: "09:42" },
   { label: "Status", value: "PASS", status: "pass" },
+  { label: "Photos", value: "12 attached" },
+  { label: "Report", value: "Emailed after visit" },
 ];

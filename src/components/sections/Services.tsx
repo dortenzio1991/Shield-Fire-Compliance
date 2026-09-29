@@ -8,22 +8,22 @@ export const services = [
   {
     icon: Droplets,
     title: "Sprinkler systems",
-    body: "Monthly visual inspection of wet and dry sprinkler systems — gauges, valves, and control assemblies verified against code.",
+    body: "Monthly visual inspection of sprinkler systems: gauges, control valves, and visible components checked against code.",
   },
   {
     icon: GaugeCircle,
     title: "Standpipe systems",
-    body: "Pressure, valve, and connection checks on standpipe systems, logged checkpoint by checkpoint on site.",
+    body: "Monthly visual inspection of standpipe systems: gauges, hose valves, and fire department connections, recorded checkpoint by checkpoint.",
   },
   {
     icon: FileBadge,
-    title: "FDNY C of F compliance",
-    body: "Inspections performed under FDNY Certificates of Fitness, with direct FDNY documentation and recordkeeping.",
+    title: "Certified inspection",
+    body: "Performed under FDNY Certificates of Fitness S-12 and S-13, with the signed record kept on site as FDNY requires.",
   },
   {
     icon: CalendarClock,
-    title: "Recurring monthly inspections",
-    body: "A standing monthly cadence that keeps your compliance record continuous — and always filed the same day.",
+    title: "Recurring monthly visits",
+    body: "A standing monthly schedule that keeps your inspection record continuous.",
   },
 ];
 

@@ -56,14 +56,8 @@ export function Header() {
               </Link>
             );
           })}
-          <Link
-            href="/client-login"
-            className="rounded-md px-3.5 py-2 font-body text-sm font-medium text-slate transition-colors hover:text-navy"
-          >
-            Client login
-          </Link>
           <Link href="/book" className="btn btn-navy ml-2">
-            Book inspection
+            Get your first month free
           </Link>
         </nav>
 
@@ -97,18 +91,11 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/client-login"
-            onClick={() => setOpen(false)}
-            className="rounded-md px-3 py-2.5 font-body text-base font-medium text-navy hover:bg-white"
-          >
-            Client login
-          </Link>
-          <Link
             href="/book"
             onClick={() => setOpen(false)}
             className="btn btn-navy mt-3 w-full"
           >
-            Book inspection
+            Get your first month free
           </Link>
         </Container>
       </div>

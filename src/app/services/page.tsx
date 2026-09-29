@@ -8,19 +8,24 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Independent, third-party inspection of sprinkler and standpipe systems under FDNY Certificates of Fitness — monthly recurring, with same-day filing. We inspect. We never repair.",
+    "Independent, third-party inspection of sprinkler and standpipe systems under FDNY Certificates of Fitness S-12 and S-13. Monthly recurring. We inspect, we never repair.",
 };
 
 const extras = [
   {
     n: "05",
     title: "Deficiency documentation",
-    body: "When a system fails, we document exactly what and why — with photo evidence, a timestamp, and a same-hour notification.",
+    body: "Each deficiency is written up clearly with photos, so any licensed contractor can act on it.",
   },
   {
     n: "06",
-    title: "Contractor referral",
-    body: "If a repair is genuinely needed, we hand you a clean record to take to any licensed contractor of your choosing. We never do the work ourselves.",
+    title: "Reports your way",
+    body: "A photo-verified report emailed after every visit, with one point of contact across every building you manage.",
+  },
+  {
+    n: "07",
+    title: "Your contractor, your choice",
+    body: "We hand you the record. You choose who fixes it. We take no referral fees.",
   },
 ];
 
@@ -30,7 +35,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Independent verification, system by system."
-        intro="We check compliance — we never sell, install, or service the equipment we inspect. Book a single inspection or a recurring monthly cycle; every visit produces the same on-record report."
+        intro="We check compliance. We never sell, install, or service the equipment we inspect. Every monthly visit produces the same photo-verified, on-record report."
       />
 
       <section className="bg-paper py-20 sm:py-24">
@@ -88,11 +93,26 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 font-body text-lg leading-relaxed text-paper/70">
-                If something fails, we tell you exactly what and why — and hand
+                If something fails, we tell you exactly what and why, and hand
                 you a record you can take to any licensed contractor. That&apos;s
                 the whole point of independent.
               </p>
             </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-paper pb-20 sm:pb-24">
+        <Container>
+          <div className="rounded-2xl border border-hairline bg-white p-6 shadow-card sm:p-8">
+            <h3 className="font-display text-lg font-semibold text-navy">
+              What we don&apos;t do
+            </h3>
+            <p className="mt-3 max-w-3xl font-body text-[15px] leading-relaxed text-slate">
+              Repairs, maintenance, and system testing beyond visual inspection
+              are performed by licensed Master Fire Suppression Piping
+              Contractors or Master Plumbers. We inspect only.
+            </p>
           </div>
         </Container>
       </section>

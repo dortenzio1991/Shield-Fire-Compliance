@@ -65,7 +65,7 @@ export function Logo({
     <Link
       href={href}
       className={`group inline-flex items-center gap-2.5 ${className}`}
-      aria-label={`${"Shield"} Fire Compliance — home`}
+      aria-label="Shield Fire Compliance, home"
     >
       <ShieldMark
         variant={variant}

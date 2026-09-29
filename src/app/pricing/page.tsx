@@ -8,21 +8,21 @@ import { Reveal } from "@/components/motion/Reveal";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Honest, published pricing for independent sprinkler and standpipe compliance inspections — single, monthly recurring, and multi-site portfolio. No call-for-a-quote.",
+    "Honest, published pricing for independent monthly sprinkler and standpipe inspections in Brooklyn, Queens, and Manhattan. From $99 per month. No hidden quotes.",
 };
 
 const faqs = [
   {
-    q: "Site size & systems",
+    q: "Site size and systems",
     a: "Rates reflect the number of sprinkler and standpipe risers and checkpoints a monthly visit covers.",
   },
   {
-    q: "Inspection frequency",
-    a: "Single inspections, monthly recurring programs, and multi-site portfolios are each priced up front.",
+    q: "Number of buildings",
+    a: "Each building gets its own monthly schedule and rate. Several buildings are billed together, with one point of contact.",
   },
   {
     q: "What's never included",
-    a: "No repairs, no equipment sales, no service contracts — because we hold no financial stake in any finding.",
+    a: "No repairs, no equipment sales, no service contracts, because we hold no financial stake in any finding.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="Straightforward pricing for an independent record."
-        intro="You see the rate before you book. The tiers below are our published starting points — no muddy quotes, no pressure, no surprises."
+        intro="You see the rate before you book. The tiers below are our published starting points, with no hidden quotes and no pressure."
       />
 
       <Pricing withHeading={false} />

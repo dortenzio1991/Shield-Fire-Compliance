@@ -9,8 +9,8 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.promise}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} · ${site.promise}`,
+    template: `%s · ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: `${site.name} — ${site.promise}`,
+    title: `${site.name} · ${site.promise}`,
     description: site.description,
     url: site.url,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.promise}`,
+    title: `${site.name} · ${site.promise}`,
     description: site.description,
   },
   robots: { index: true, follow: true },

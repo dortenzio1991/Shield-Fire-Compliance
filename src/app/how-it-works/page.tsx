@@ -9,15 +9,14 @@ import { Reveal } from "@/components/motion/Reveal";
 export const metadata: Metadata = {
   title: "How it works",
   description:
-    "How Shield runs an independent inspection: schedule, inspect on-site under an FDNY Certificate of Fitness, produce a geo-tagged timestamped report, and file to the FDNY the same day.",
+    "How Shield runs your monthly inspection: schedule, inspect on site under an FDNY Certificate of Fitness, sign the log book, and send a photo-verified report after every visit.",
 };
 
 const guarantees = [
-  "GPS location captured at time of arrival",
-  "Date and time stamped on every checkpoint",
-  "Pass / fail status recorded item by item",
-  "Same-hour deficiency notification",
-  "Filed same-day — never a paper logbook",
+  "Photos of every checkpoint and of the signed log book",
+  "Pass or fail recorded for every checkpoint",
+  "A report emailed after every visit, alongside the signed log book kept on site",
+  "Same-day deficiency notice",
 ];
 
 export default function HowItWorksPage() {
@@ -26,7 +25,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="How it works"
         title="Four steps. One independent record."
-        intro="Every inspection follows the same process, whether it's a single building or a full portfolio — because consistency is what makes a compliance record defensible."
+        intro="Every inspection follows the same process, whether it's a single building or a portfolio, because consistency is what makes a compliance record defensible."
       />
 
       <section className="bg-paper py-20 sm:py-24">
@@ -36,7 +35,7 @@ export default function HowItWorksPage() {
               <Reveal key={step.n} y={18}>
                 <div className="card h-full">
                   <span className="font-mono text-sm font-medium tracking-widest text-gold">
-                    {step.n} — {step.title}
+                    {step.n} · {step.title}
                   </span>
                   <div className="mt-4 h-px w-full bg-hairline" />
                   <p className="mt-4 font-body text-[15px] leading-relaxed text-slate">
@@ -63,9 +62,8 @@ export default function HowItWorksPage() {
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="mt-5 font-body text-lg leading-relaxed text-paper/70">
-                  A compliance report is only as good as the trust behind it.
-                  That&apos;s why every Shield inspection produces a record built
-                  to hold up — to your insurer, your board, or the FDNY.
+                  A clear, photo-verified record you can show to an owner, a
+                  board, an insurer, or an FDNY inspector.
                 </p>
               </Reveal>
               <ul className="mt-8 flex flex-col gap-3">
@@ -81,11 +79,11 @@ export default function HowItWorksPage() {
             </div>
             <Reveal delay={0.1} y={22}>
               <RecordCard
-                title="Live record sample"
+                title="Sample report"
                 rows={[
-                  { label: "Site", value: "S-12" },
-                  { label: "Checkpoint", value: "SP-04" },
-                  { label: "Time", value: "10:11 EDT" },
+                  { label: "Site", value: "Sample building, Brooklyn" },
+                  { label: "Checkpoint", value: "STP-01" },
+                  { label: "Time", value: "10:11" },
                   { label: "Status", value: "PASS", status: "pass" },
                 ]}
               />
