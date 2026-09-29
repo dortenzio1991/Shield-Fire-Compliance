@@ -15,10 +15,10 @@ const services = [
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Formspree form ID, supplied via env (NEXT_PUBLIC_FORMSPREE_ID). When unset,
-// the form shows a visible error and never silently drops a submission.
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-const ENDPOINT = FORMSPREE_ID ? `https://formspree.io/f/${FORMSPREE_ID}` : null;
+// Formspree endpoint. The form ID is public (it ships in the client bundle),
+// so it lives here with an optional env override (NEXT_PUBLIC_FORMSPREE_ID).
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || "xoevrkwq";
+const ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
 export function BookingForm() {
   const [errors, setErrors] = useState<Errors>({});
@@ -45,14 +45,6 @@ export function BookingForm() {
     if (Object.keys(next).length > 0) return;
 
     setStatus("submitting");
-
-    if (!ENDPOINT) {
-      setStatus("error");
-      setErrorMsg(
-        `This form isn't connected yet. Please email us at ${site.email} and we'll get right back to you.`
-      );
-      return;
-    }
 
     try {
       const res = await fetch(ENDPOINT, {
