@@ -4,19 +4,19 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 const doList = [
-  "Monthly visual inspection of sprinkler & standpipe systems",
-  "Same-day digital compliance reports",
-  "Direct FDNY documentation and recordkeeping",
-  "Same-hour deficiency notification, every time",
-  "Honest referral to a licensed contractor if repair is ever needed",
+  "Monthly visual inspection of sprinkler and standpipe systems",
+  "Signed log book entry at the riser, kept at the building as FDNY requires",
+  "A report after every visit, with photos of each checkpoint and of the signed log book",
+  "Same-day notice of any deficiency",
+  "A clear deficiency record for the licensed contractor you choose",
 ];
 
 const neverList = [
-  "Sell or perform repair work on what we inspect",
-  "Have any financial stake in finding a deficiency",
-  "Lock your compliance history in a paper logbook",
-  "Delay reporting a real deficiency, for any reason",
-  'Hide our pricing behind a "call for a quote"',
+  "Sell or perform repairs on what we inspect",
+  "Take referral fees from contractors",
+  "Skip a visit or log one that didn't happen",
+  "Sit on a deficiency",
+  "Find extra work to bill you for",
 ];
 
 export function Problem() {
@@ -29,15 +29,17 @@ export function Problem() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-[2.6rem]">
-              Most fire safety companies inspect and repair. That&apos;s the
-              problem.
+              Your building needs a monthly inspection. You need proof it
+              happened.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 font-body text-lg leading-relaxed text-slate">
-              When the company that finds the deficiency also gets paid to fix
-              it, every finding is a little bit suspect. We removed that conflict
-              entirely — by design.
+              Under NYC Fire Code 903.5, sprinkler systems must be inspected at
+              least monthly by an FDNY Certificate of Fitness holder, with
+              records kept. Too often the visit is late, skipped, or logged
+              without anyone showing up. Shield makes your monthly inspection
+              something you can check.
             </p>
           </Reveal>
         </div>

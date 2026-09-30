@@ -6,22 +6,22 @@ export const steps = [
   {
     n: "01",
     title: "Schedule",
-    body: "Book a monthly recurring visit for your sprinkler and standpipe systems. Pricing is published — no call-for-a-quote.",
+    body: "Set a standing monthly visit for each building. We confirm scope and your monthly rate within one business day.",
   },
   {
     n: "02",
-    title: "Inspect on-site",
-    body: "An inspector under an FDNY Certificate of Fitness performs a full visual inspection. Arrival is geo-tagged automatically.",
+    title: "Inspect on site",
+    body: "An FDNY Certificate of Fitness holder performs the monthly visual inspection and signs the log book at the riser.",
   },
   {
     n: "03",
-    title: "Geo-tagged report",
-    body: "Every checkpoint is timestamped and recorded on site — pass or fail — with a deficiency notification sent the same hour.",
+    title: "Photo-verified report",
+    body: "Every checkpoint is marked pass or fail and photographed, along with the signed log book. Any deficiency is reported to you the same day.",
   },
   {
     n: "04",
-    title: "Same-day FDNY filing",
-    body: "Your verified record is filed the same day and stored in your compliance history — never a paper logbook.",
+    title: "Your records",
+    body: "We email you the report after every visit, and we keep one point of contact across all of your buildings. The official record stays on the premises for at least three years, as FDNY requires.",
   },
 ];
 
@@ -35,7 +35,7 @@ export function HowItWorks() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-[2.6rem]">
-              From schedule to filed record, in four steps.
+              From first call to monthly record, in four steps.
             </h2>
           </Reveal>
         </div>
@@ -58,6 +58,14 @@ export function HowItWorks() {
             </RevealItem>
           ))}
         </RevealGroup>
+
+        <Reveal delay={0.1}>
+          <p className="mt-8 max-w-3xl font-body text-sm leading-relaxed text-slate">
+            If a defect is still uncorrected after 30 days, FDNY rules require
+            the Certificate of Fitness holder to report it to the Fire
+            Department. We will always tell you well before that point.
+          </p>
+        </Reveal>
       </Container>
     </section>
   );

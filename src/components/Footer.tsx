@@ -16,8 +16,7 @@ const columns = [
     title: "Get started",
     links: [
       { label: "Pricing", href: "/pricing" },
-      { label: "Book inspection", href: "/book" },
-      { label: "Client login", href: "/client-login" },
+      { label: "Get your first month free", href: "/book" },
     ],
   },
 ];
@@ -31,8 +30,9 @@ export function Footer() {
           <div>
             <Logo variant="dark" />
             <p className="mt-5 max-w-xs font-body text-sm leading-relaxed text-paper/60">
-              {site.promise} Independent, third-party inspection of sprinkler
-              and standpipe systems under FDNY Certificates of Fitness.
+              {site.promise} Monthly sprinkler and standpipe inspection under
+              FDNY Certificates of Fitness S-12 #{site.s12} and S-13 #{site.s13}.
+              Fully insured.
             </p>
           </div>
 

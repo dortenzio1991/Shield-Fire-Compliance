@@ -7,7 +7,7 @@ import { ShieldMark } from "@/components/Logo";
 export const metadata: Metadata = {
   title: "Client login",
   description:
-    "Log in to your Shield Fire Compliance client portal to view inspection records, download filed reports, and track upcoming visits.",
+    "Log in to your Shield Fire Compliance client portal to view your inspection history and reports.",
   robots: { index: false, follow: true },
 };
 
@@ -25,7 +25,7 @@ export default function ClientLoginPage() {
               Log in to your records.
             </h1>
             <p className="mt-4 font-body text-[15px] leading-relaxed text-slate">
-              View inspection history, download filed FDNY reports, and track
+              View your inspection history, download your reports, and track
               upcoming monthly visits.
             </p>
           </div>

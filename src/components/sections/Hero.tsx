@@ -24,25 +24,27 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight text-navy sm:text-6xl">
-              We inspect.
+            <h1 className="mt-5 font-display text-[2.4rem] font-bold leading-[1.06] tracking-tight text-navy sm:text-[3.4rem]">
+              Monthly sprinkler and standpipe inspections.
               <br />
-              We never repair.
+              On time, on record.
             </h1>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-slate">
-              Monthly fire sprinkler and standpipe compliance, with a same-day
-              digital report — from a company with zero financial incentive to
-              find something wrong.
+              NYC Fire Code requires a monthly inspection by an FDNY Certificate
+              of Fitness holder. We show up when we say we will, sign your
+              on-site log book, and send you a report with photos proving the
+              visit happened. We only inspect, so we never have a reason to find
+              work that isn&apos;t there.
             </p>
           </Reveal>
 
           <Reveal delay={0.15}>
             <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
               <Link href="/book" className="btn btn-primary px-6 py-3.5 text-base">
-                Get Your First Month Free
+                Get your first month free
               </Link>
               <Link
                 href="/how-it-works"
@@ -59,7 +61,8 @@ export function Hero() {
 
           <Reveal delay={0.2}>
             <p className="mt-8 font-mono text-xs uppercase tracking-eyebrow text-slate">
-              Geo-tagged · Timestamped · Filed same day · FDNY C of F
+              Photo verified · Signed on site · Report after every visit · FDNY
+              S-12 and S-13
             </p>
           </Reveal>
         </div>

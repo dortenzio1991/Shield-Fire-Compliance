@@ -6,18 +6,18 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 const points = [
   {
     icon: ShieldCheck,
-    title: "An independent third party",
-    body: "We hold FDNY Certificates of Fitness and inspect on your behalf — with no equipment to sell and no repair contract waiting at the end.",
+    title: "Certified and insured",
+    body: "Inspections are performed under FDNY Certificates of Fitness S-12 (sprinkler systems, #93607281) and S-13 (standpipe systems, #93635076). Shield is fully insured, and a certificate of insurance is available on request.",
   },
   {
     icon: Ban,
     title: "No repairs. Ever.",
-    body: "We never perform the work we recommend. If something needs fixing, we refer you to a licensed contractor of your choosing.",
+    body: "We never perform or sell the work we recommend. If something needs fixing, you choose the licensed contractor.",
   },
   {
     icon: FileCheck2,
-    title: "A record you can trust",
-    body: "Because we have zero stake in what the report says, the finding is the finding — geo-tagged, timestamped, and filed the same day.",
+    title: "Proof, not promises",
+    body: "Every report includes photos of what we inspected and of the signed log book, so you never have to take anyone's word that the visit happened.",
   },
 ];
 
@@ -31,14 +31,14 @@ export function Idea() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-[2.6rem]">
-              An independent check, not a fire company.
+              An inspector with nothing to sell you.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 font-body text-lg leading-relaxed text-slate">
-              Independence is the entire pitch. We inspect, we document, and we
-              file — and we never sell the repairs. That&apos;s what makes the
-              report trustworthy to you, your insurer, and the FDNY.
+              We inspect and we document. We don&apos;t repair or maintain
+              systems, and we earn nothing from what the report says. That keeps
+              the finding honest and the conversation simple.
             </p>
           </Reveal>
         </div>

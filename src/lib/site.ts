@@ -2,14 +2,17 @@ export const site = {
   name: "Shield Fire Compliance",
   shortName: "Shield",
   tagline: "Verified compliance. Zero conflict.",
-  promise: "An independent check, not a fire company.",
+  promise: "An independent inspector, not a fire company.",
   url: "https://www.shieldfirecompliance.com",
   email: "inspections@shieldfirecompliance.com",
-  phone: "(212) 555-0148",
-  phoneHref: "tel:+12125550148",
-  coverage: "New York City · FDNY jurisdiction",
+  phone: "(929) 412-1143",
+  phoneHref: "tel:+19294121143",
+  coverage: "Brooklyn · Queens · Manhattan",
+  // FDNY Certificate of Fitness numbers (S-12 sprinkler, S-13 standpipe).
+  s12: "93607281",
+  s13: "93635076",
   description:
-    "Independent, third-party inspection of sprinkler and standpipe systems under FDNY Certificates of Fitness. We inspect. We never repair. Every report is geo-tagged, timestamped, and filed the same day.",
+    "Monthly fire sprinkler and standpipe inspections in Brooklyn, Queens, and Manhattan by an FDNY Certificate of Fitness holder. Photo-verified report after every visit, no repairs sold. From $99 per month.",
 } as const;
 
 export const nav = [
